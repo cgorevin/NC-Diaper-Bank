@@ -9,7 +9,7 @@ To get started, just do the following:
     
     b.) This is the repo you should be making all your changes in. You'll be adding, committing, and pushing to this repo, and then making "Pull Requests" to the organization repo.
 
-2. Please continue reading over this link http://ryowheatley.blogspot.com/2017/03/simple-github-collaboration-with-lots.html?m=1 start at step 3 under Diagram Break-Collaboration Workflow
+2. Please continue reading over this link http://ryowheatley.blogspot.com/2017/03/simple-github-collaboration-with-lots.html?m=1 start from step 3 under Diagram Break-Collaboration Workflow
 
 Happy coding!
 
