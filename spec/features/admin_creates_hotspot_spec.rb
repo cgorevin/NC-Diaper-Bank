@@ -14,4 +14,12 @@ feature "admin creatures hotspot" do
         
         expect(page).to have_content "Hotspot created succesfully."
     end
+    
+        scenario "with invalid fields" do
+        visit new_hotspot_path
+        
+        click_button("Save")
+        
+        expect(page).to have_content "Hotspot could not be saved."
+    end
 end

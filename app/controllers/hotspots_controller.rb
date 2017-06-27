@@ -6,7 +6,12 @@ class HotspotsController < ApplicationController
     def create
         @hotspot = Hotspot.create(hostpot_params)
 
-        flash[:notice] = "Hotspot created succesfully."
+        if @hotspot.valid?
+            flash[:notice] = "Hotspot created succesfully."
+        else
+            flash[:notice] = "Hotspot could not be saved."
+        end
+        
         redirect_to new_hotspot_path
     end
     
