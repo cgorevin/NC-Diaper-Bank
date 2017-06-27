@@ -12,6 +12,6 @@ feature "admin creatures hotspot" do
         
         click_button("Save")
         
-        expect(page).to have_content "hotspot created succesfully"
+        expect(page).to have_content "Hotspot created succesfully."
     end
 end
