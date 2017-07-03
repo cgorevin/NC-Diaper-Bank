@@ -3,7 +3,7 @@
 feature "admin edits hotspot" do
     
    scenario "with valid fields" do
-       hotspot = Hotspot.create(title: "Walmart", street_address: "123 main st", city: "Raleigh", state: "NC", zip_code: 27707, phone_number: "(910)916-4121")
+       hotspot = create(:hotspot)
        
        visit edit_hotspot_path(hotspot)
        fill_in("Title", with:"walmart")
@@ -19,8 +19,7 @@ feature "admin edits hotspot" do
    end
    
     scenario "with invalid fields" do
-        hotspot = Hotspot.create(title: "Walmart", street_address: "123 main st", city: "Raleigh", state: "NC", zip_code: 27707, phone_number: "(910)916-4121")
-        
+        hotspot = create(:hotspot)
         visit edit_hotspot_path(hotspot)
         fill_in("Title", with:"")
         
