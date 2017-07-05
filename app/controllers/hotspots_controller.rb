@@ -32,7 +32,7 @@ class HotspotsController < ApplicationController
     end
     
     def destroy
-       @hotspot = Hotspot.find(params[:id]).destroy
+        @hotspot = Hotspot.find(params[:id]).destroy
         
             flash[:success] = "The hotspot was deleted succesfully"
        
