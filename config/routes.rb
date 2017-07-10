@@ -12,5 +12,5 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
 
-  resources :hotspots, only: [:new, :create, :edit, :update, :destroy]
+  resources :hotspots, only: [:new, :create, :edit, :update, :destroy, :index]
 end
