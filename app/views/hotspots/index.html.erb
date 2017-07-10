@@ -3,7 +3,6 @@
 <% if @hotspots.empty? %>
     There are no hotspots
 <% else %>
-
     <table>
       <thead>
         <tr>
@@ -13,7 +12,6 @@
       </thead>
     
       <tbody>
-    
         <% @hotspots.each do |hotspot| %>
           <tr>
            <%= hotspot.title %>
@@ -22,10 +20,8 @@
            <%= hotspot.state %>
            <%= hotspot.zip_code %>
            <%= hotspot.phone_number %>
-           
           </tr>
         <% end %>
       </tbody>
     </table>
-
 <% end %>
