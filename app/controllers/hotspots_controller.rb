@@ -39,9 +39,9 @@ class HotspotsController < ApplicationController
     def destroy
         @hotspot = Hotspot.find(params[:id]).destroy
         
-            flash[:success] = "The hotspot was deleted succesfully"
+            flash[:notice] = "The hotspot was deleted succesfully."
        
-        redirect_to edit_hotspot_path(@hotspot)
+        redirect_to hotspots_path
     end
     
     private
