@@ -1,4 +1,9 @@
 class HotspotsController < ApplicationController
+    
+    def index
+        @hotspots = Hotspot.all
+    end
+    
     def new
         @hotspot = Hotspot.new
     end
