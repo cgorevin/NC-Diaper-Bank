@@ -1,0 +1,21 @@
+<h4>Donation Sights</h4>
+<div class="row">
+    <div class="col-xs-0"></div>
+<div id = 'show_form' class="col-xs-5">
+<% @hotspots.each do |hotspot| %>
+<div class="list-group">
+  <a href="#" class="list-group-item active">
+    <h4 class="list-group-item-heading"><tbody>
+          <tr>
+           <%= hotspot.title %>
+          </tr>
+        </h4>
+    <p class="list-group-item-text"><%= hotspot.street_address %>, <%= hotspot.zip_code %></p>
+    <p class="list-group-item-text"><%= hotspot.phone_number %></p>
+    <div class="col-xs-7"></div>
+    <%= link_to 'Add', "/hotspots/new", class: 'btn-btn default' %>
+    <%= link_to 'Edit', "/hotspots/#{hotspot.id}/edit", class: 'btn-btn default' %>
+    
+  </a>
+  <% end %>
+</div>

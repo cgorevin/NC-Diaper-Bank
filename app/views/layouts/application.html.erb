@@ -1,18 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Workspace</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  
-  <% if flash[:notice] %>
-    <div class="notice"><%= flash[:notice] %></div>
+  <head>
+    <title><%= static_pages_home_path %></title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all',
+                                              'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+      </script>
+    <![endif]-->
+  </head>
+  <body>
+    <header class="navbar navbar-fixed-top navbar-inverse align-middle"> 
+      <div class="container">
+        <div class = "navbar-brand">
+        <%= link_to(image_tag("NCDB_logo_web.png", :class =>"rounded", :alt => "align-middle", height: 74, width: 310), "http://ncdiaperbank.org") %>
+        </div>
+        <nav>
+          <ul class="nav navbar-nav navbar-right align-center">
+            <li><%= link_to "About", 'http://ncdiaperbank.org/about-us-2/' %></li>
+            <li><%= link_to "Collect",   '#' %></li>
+            <li><%= link_to "Donate", hotspots_path %></li>
+            <li><%= link_to "Home", static_pages_home_path %></li>
+            <li><%= link_to "Support", 'http://ncdiaperbank.org/donate/' %></li>
+          </ul>
+        </nav>
+        
+      </div>
+    </header>
+    <% if flash[:notice] %>
+      <div class="notice"><%= flash[:notice] %></div>
   <% end %>
-  
-  <%= yield %>
-
-</body>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
 </html>
