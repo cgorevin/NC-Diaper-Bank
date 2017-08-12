@@ -13,9 +13,8 @@
     <p class="list-group-item-text"><%= hotspot.street_address %>, <%= hotspot.zip_code %></p>
     <p class="list-group-item-text"><%= hotspot.phone_number %></p>
     <div class="col-xs-7"></div>
-    <%= link_to 'Add', "/hotspots/new", class: 'btn-btn default' %>
-    <%= link_to 'Edit', "/hotspots/#{hotspot.id}/edit", class: 'btn-btn default' %>
-    
+      <%= link_to 'Add', "/hotspots/new", class: 'btn-btn default' %>
+      <%= link_to 'Edit', "/hotspots/#{hotspot.id}/edit", class: 'btn-btn default' %>
   </a>
   <% end %>
 </div>
