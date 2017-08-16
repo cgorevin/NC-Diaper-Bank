@@ -6,9 +6,6 @@
 .navbar {
   height: 147px;
   background-image: url(asset-path('NC_Diaper_Bank_fabric_plaid.png'));
-  //background-image: url(asset-path('NCDB_logo_web.png')), url(asset-path('NC_Diaper_Bank_fabric_plaid.png')) no-repeat; 
-  //background: url(asset-path('NC_Diaper_Bank_fabric_plaid.png'));
-  //background-image: url(asset-path('NCDB_logo_web.png'));
 }
 
 .navbar-brand {
@@ -40,8 +37,6 @@ textarea {
   margin-bottom: 10px;
 }
 
-
-
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -57,8 +52,9 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 3em;
   letter-spacing: -1px;
+  margin-top: 100px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
