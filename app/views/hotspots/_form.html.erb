@@ -1,21 +1,29 @@
-<%= form_for @hotspot do |f| %>
-  <div class="form-group">
-    <%= f.text_field :title, placeholder: 'Title', class: 'form-control' %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-0"></div>
+<div id = 'hotspots_form' class="col-xs-5">
+    <%= form_for @hotspot do |f| %>
+      <div class="form-group">
+        <%= f.text_field :title, placeholder: 'Title', class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.text_field :street_address, placeholder: 'street address', class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.text_field :city, placeholder: 'city', class: 'form-control' %>
+      </div>
+      <div class="form-group">
+          <%= f.text_field :state, placeholder: 'state', class: 'form-control'%>
+      </div>
+      <div class="form-group">
+          <%= f.number_field :zip_code, placeholder: 'zip code', class: 'form-control'%>
+      </div>
+      <div class="form-group">
+          <%= f.text_field :phone_number, placeholder: 'phone number', class: 'form-control'%>
+      </div>
+      <%= f.submit 'save', class:'btn btn btn-primary button_margins' %>
+    <% end %>
+    </div>
+    <div class="col-xs-7"></div>
   </div>
-  <div class="form-group">
-    <%= f.text_field :street_address, placeholder: 'street address', class: 'form-control' %>
-  </div>
-  <div class="form-group">
-    <%= f.text_field :city, placeholder: 'city', class: 'form-control' %>
-  </div>
-  <div class="form-group">
-      <%= f.text_field :state, placeholder: 'state', class: 'form-control'%>
-  </div>
-  <div class="form-group">
-      <%= f.number_field :zip_code, placeholder: 'zip code', class: 'form-control'%>
-  </div>
-  <div class="form-group">
-      <%= f.text_field :phone_number, placeholder: 'phone number', class: 'form-control'%>
-  </div>
-  <%= f.submit 'Save'%>
-<% end %>
+</div>
