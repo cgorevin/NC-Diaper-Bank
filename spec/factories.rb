@@ -1,4 +1,7 @@
 FactoryGirl.define do
+  factory :admin do
+    
+  end
     factory :hotspot do
         title Faker::Company.name
         street_address Faker::Address.street_address
