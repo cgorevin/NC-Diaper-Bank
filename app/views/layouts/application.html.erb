@@ -24,6 +24,15 @@
             <li><%= link_to "Donate", hotspots_path %></li>
             <li><%= link_to "Home", static_pages_home_path %></li>
             <li><%= link_to "Support", 'http://ncdiaperbank.org/donate/' %></li>
+            <% if admin_signed_in? %>
+              <li>
+                <%= link_to('Logout', destroy_admin_session_path, method: :delete) %>        
+              </li>
+            <% else %>
+              <li>
+                <%= link_to('Login', new_admin_session_path)  %>  
+              </li>
+            <% end %>
           </ul>
         </nav>
       </div>

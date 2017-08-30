@@ -14,8 +14,10 @@
       <p><%= hotspot.city %>, <%= hotspot.zip_code %></p>
       <p class="list-group-item-text"><%= hotspot.phone_number %></p>
   <div class="col-xs-7"></div>
+    <% if admin_signed_in? %>
         <%= link_to 'Add', "/hotspots/new", class: 'btn-btn default' %>
         <%= link_to 'Edit', "/hotspots/#{hotspot.id}/edit", class: 'btn-btn default' %>
+    <% end %>
     </a>
   <% end %>
 </div>
