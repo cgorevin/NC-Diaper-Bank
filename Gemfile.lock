@@ -106,6 +106,7 @@ GEM
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)
+    pg (0.20.0)
     public_suffix (2.0.5)
     rack (1.6.5)
     rack-test (0.6.3)
@@ -210,6 +211,7 @@ DEPENDENCIES
   faker
   jbuilder (~> 2.0)
   jquery-rails
+  pg (= 0.20.0)
   rails (= 4.2.5)
   rspec-rails
   sass-rails (~> 5.0)

@@ -1,6 +1,10 @@
 require "rails_helper"
 
 feature "admin creatures hotspot" do
+    before :each do
+        admin_login
+    end
+    
     scenario "with valid fields" do
         visit new_hotspot_path
         fill_in("Title", with:"walmart")
