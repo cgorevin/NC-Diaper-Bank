@@ -11,7 +11,7 @@
             </tr>
           </h4>
       <p class="list-group-item-text"><%= hotspot.street_address %></p>
-      <p><%= hotspot.city %>, <%= hotspot.zip_code %></p>
+      <p><%= hotspot.city %>,<%= hotspot.state %>,<%= hotspot.zip_code %></p>
       <p class="list-group-item-text"><%= hotspot.phone_number %></p>
   <div class="col-xs-7"></div>
     <% if admin_signed_in? %>

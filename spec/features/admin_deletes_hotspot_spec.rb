@@ -1,6 +1,10 @@
 require "rails_helper"
 
 feature 'Admin deletes hotspot' do
+  before :each do
+        login_admin
+    end
+    
   scenario do
     hotspot = create(:hotspot)
     visit edit_hotspot_path(hotspot)

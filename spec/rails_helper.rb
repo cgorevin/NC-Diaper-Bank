@@ -18,6 +18,12 @@ RSpec.configure do |config|
   # Use the following instead if you are on Devise <= 4.1.1
   # config.include Devise::TestHelpers, :type => :controller
 end
+
+RSpec.configure do |config|
+  config.before(:type => :feature) do
+    require "#{::Rails.root}/spec/support/feature_helpers.rb"
+  end
+end
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
