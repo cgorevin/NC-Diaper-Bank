@@ -1,3 +1,2 @@
 <%= render 'form' %>
-<%= link_to 'Delete'%>
-    flash[:success] = "The hotspot was deleted succesfully"
+<%= link_to 'Delete', @hotspot, method: :delete %>

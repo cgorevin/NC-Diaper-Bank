@@ -1,4 +1,9 @@
 class HotspotsController < ApplicationController
+    
+    def index
+        @hotspots = Hotspot.all
+    end
+    
     def new
         @hotspot = Hotspot.new
     end
@@ -12,7 +17,7 @@ class HotspotsController < ApplicationController
             flash[:notice] = "Hotspot could not be saved."
         end
         
-        redirect_to new_hotspot_path
+        redirect_to hotspots_path
     end
     
     def edit
@@ -28,15 +33,15 @@ class HotspotsController < ApplicationController
             flash[:notice] = "There was an error updating the hotspot."
         end
         
-        redirect_to edit_hotspot_path(@hotspot)
+        redirect_to hotspots_path(@hotspot)
     end
     
     def destroy
         @hotspot = Hotspot.find(params[:id]).destroy
         
-            flash[:success] = "The hotspot was deleted succesfully"
+            flash[:notice] = "The hotspot was deleted succesfully."
        
-        redirect_to edit_hotspot_path(@hotspot)
+        redirect_to hotspots_path
     end
     
     private
