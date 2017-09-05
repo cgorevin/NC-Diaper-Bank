@@ -9,6 +9,8 @@ class Hotspot < ActiveRecord::Base
             obj.state = geo.state
             obj.country = geo.country
             obj.zip_code = parse_address(geo.address)[2]
+            obj.latitude = geo.latitude
+            obj.longitude = geo.longitude
             obj
         end
     end   
