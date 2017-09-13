@@ -1,0 +1,4 @@
+development:
+    API_KEY: AIzaSyBPB_jaUPC6a8yV5Qj9nNZNCqwuDO1temM
+production:
+    API_KEY: AIzaSyBPB_jaUPC6a8yV5Qj9nNZNCqwuDO1temM
