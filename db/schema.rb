@@ -40,6 +40,9 @@ ActiveRecord::Schema.define(version: 20170817191346) do
     t.string   "phone_number"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.string   "country"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
 end
