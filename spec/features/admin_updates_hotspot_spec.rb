@@ -1,6 +1,9 @@
  require "rails_helper"
 
 feature "admin edits hotspot" do
+    before :each do
+        login_admin
+    end
     
    scenario "with valid fields" do
        hotspot = create(:hotspot)
