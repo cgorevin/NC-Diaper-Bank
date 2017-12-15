@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   devise_for :admins, :skip => [:registrations]
  
   get 'static_pages/home'
-
+  
+  post 'static_pages/home'
+  
   get 'static_pages/about'
 
   get 'static_pages/collect'
@@ -14,5 +16,6 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
   
-  resources :hotspots, only: [:new, :create, :edit, :update, :destroy, :index]
+  resources :hotspots
+
 end
