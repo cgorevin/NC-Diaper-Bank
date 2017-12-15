@@ -1,4 +1,17 @@
 <div class="container">
   <h2>Welcome to the Hotspot Locator</h2>
-  <p> Ideally this will be where the geocoder lives. </p>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-0"></div>
+      <div id = 'hotspots_form' class="col-xs-5">
+        <%= form_for :user_address, url: { :controller => "hotspots", :action => "index" }, method: :get do |f| %>
+          <div class="form-group">
+            <%= f.text_field :street_address, placeholder: 'street address', class: 'form-control' %>
+          </div>
+          <%= f.submit 'Save', class:'btn btn btn-primary button_margins' %>
+        <% end %>
+      </div>
+      <div class="col-xs-7"></div>
+    </div>
+  </div>
 </div>
