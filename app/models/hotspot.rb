@@ -1,7 +1,6 @@
 class Hotspot < ActiveRecord::Base
     validates_presence_of :street_address, :city, :zip_code, :title, :country
     after_validation :geocode, if: ->(obj){ obj.full_street_address.present? and obj.address_changed? }
-    
     geocoded_by :full_street_address do |obj,results|
         if geo = results.first
             obj.street_address = parse_address(geo.address)[0]
@@ -14,6 +13,8 @@ class Hotspot < ActiveRecord::Base
             obj
         end
     end   
+    acts_as_mappable :lat_column_name => :latitude,
+                     :lng_column_name => :longitude
     
     def self.parse_address(geo_address)
         geo_address.split(",")

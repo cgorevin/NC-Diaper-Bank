@@ -85,6 +85,10 @@ GEM
       i18n (~> 0.5)
     ffi (1.9.18)
     geocoder (1.4.4)
+    geokit (1.11.0)
+    geokit-rails (2.3.0)
+      geokit (~> 1.5)
+      rails (>= 3.0)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     i18n (0.8.6)
@@ -222,6 +226,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   geocoder
+  geokit-rails
   jbuilder (~> 2.0)
   jquery-rails
   pg (= 0.20.0)
