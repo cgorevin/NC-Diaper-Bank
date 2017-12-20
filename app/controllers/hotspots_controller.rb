@@ -3,7 +3,7 @@ class HotspotsController < ApplicationController
     
     def index
         if params[:user_address]
-            @hotspots = Hotspot.by_distance(origin: params[:user_address][:street_address])
+            @hotspots = Hotspot.by_distance(origin: params["user_address"]["street_address"])
         else
             @hotspots = Hotspot.all
         end
@@ -21,12 +21,13 @@ class HotspotsController < ApplicationController
         else
             flash[:notice] = "Hotspot could not be saved."
         end
-        
+        @hotspot.save
         redirect_to hotspots_path
     end
     
     def edit
         @hotspot = Hotspot.find(params[:id])
+        @hotspot.save
     end
     
     def update
@@ -37,7 +38,7 @@ class HotspotsController < ApplicationController
         else
             flash[:notice] = "There was an error updating the hotspot."
         end
-        
+        @hotspot.save
         redirect_to hotspots_path(@hotspot)
     end
     
