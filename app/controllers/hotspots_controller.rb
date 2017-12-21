@@ -31,6 +31,7 @@ class HotspotsController < ApplicationController
     end
     
     def update
+        
         @hotspot = Hotspot.find(params[:id])
         if @hotspot.update_attributes(hotspot_params)
      
