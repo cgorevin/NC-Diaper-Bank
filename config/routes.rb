@@ -4,7 +4,9 @@ Rails.application.routes.draw do
  
   get 'static_pages/home'
 
+
   root 'static_pages#home'
   
-  resources :hotspots, only: [:new, :create, :edit, :update, :destroy, :index]
+  resources :hotspots
+
 end

@@ -2,7 +2,11 @@ class HotspotsController < ApplicationController
     before_action :authenticate_admin!, :except => [:show, :index]
     
     def index
-        @hotspots = Hotspot.all
+        if params[:user_address]
+            @hotspots = Hotspot.by_distance(origin: params["user_address"]["street_address"])
+        else
+            @hotspots = Hotspot.all
+        end
     end
     
     def new
@@ -17,7 +21,6 @@ class HotspotsController < ApplicationController
         else
             flash[:notice] = "Hotspot could not be saved."
         end
-        
         redirect_to hotspots_path
     end
     
