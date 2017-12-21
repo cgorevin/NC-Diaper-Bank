@@ -7,7 +7,7 @@ class Hotspot < ActiveRecord::Base
             obj.city = parse_address(geo.address)[1]
             obj.state = geo.state
             obj.country = geo.country
-            obj.zip_code = parse_address(geo.address)[2]
+            obj.zip_code = parse_zip_code(geo.address)[-2].chomp(',')
             obj.latitude = geo.latitude
             obj.longitude = geo.longitude
             obj
@@ -18,6 +18,10 @@ class Hotspot < ActiveRecord::Base
     
     def self.parse_address(geo_address)
         geo_address.split(",")
+    end
+    
+    def self.parse_zip_code(geo_address)
+        geo_address.split(' ')
     end
     
     def full_street_address
