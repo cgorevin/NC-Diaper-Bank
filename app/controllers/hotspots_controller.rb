@@ -21,17 +21,14 @@ class HotspotsController < ApplicationController
         else
             flash[:notice] = "Hotspot could not be saved."
         end
-        @hotspot.save
         redirect_to hotspots_path
     end
     
     def edit
         @hotspot = Hotspot.find(params[:id])
-        @hotspot.save
     end
     
     def update
-        
         @hotspot = Hotspot.find(params[:id])
         if @hotspot.update_attributes(hotspot_params)
      
@@ -39,7 +36,7 @@ class HotspotsController < ApplicationController
         else
             flash[:notice] = "There was an error updating the hotspot."
         end
-        @hotspot.save
+        
         redirect_to hotspots_path(@hotspot)
     end
     
