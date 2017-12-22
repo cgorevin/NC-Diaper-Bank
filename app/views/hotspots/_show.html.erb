@@ -2,8 +2,9 @@
 <div class="row">
     <div class="col-xs-0"></div>
     <div id = 'show_form' class="col-xs-5">
+    <div class="list-group">
   <% @hotspots.each do |hotspot| %>
-  <div class="list-group">
+      <hr></hr>
     <a href="#" class="list-group-item active">
       <h4 class="list-group-item-heading"><tbody>
             <tr>
@@ -14,10 +15,13 @@
       <p><%= hotspot.city %>,<%= hotspot.state %>,<%= hotspot.zip_code %></p>
       <p class="list-group-item-text"><%= hotspot.phone_number %></p>
   <div class="col-xs-7"></div>
-    <% if admin_signed_in? %>
-        <%= link_to 'Add', "/hotspots/new", class: 'btn-btn default' %>
+  <% if admin_signed_in? %>
         <%= link_to 'Edit', "/hotspots/#{hotspot.id}/edit", class: 'btn-btn default' %>
     <% end %>
     </a>
   <% end %>
+  <% if admin_signed_in? %>
+        <%= link_to 'Add', "/hotspots/new", class: 'btn-btn default' %>
+    <% end %>
+  <%= link_to 'New Search',"/static_pages/home", class: 'btn-btd default' %>
 </div>

@@ -71,6 +71,11 @@ h4 {
   color: #777;
 }
 
+hr {
+  margin-top: 1px;
+  margin-bottom: 5px;
+}
+
 p {
   font-size: 1.1em;
   line-height: 1.7em;
@@ -79,6 +84,10 @@ p {
 /* forms */
 
 #hotspots_form {
+   margin-top: 100px;
+}
+
+#hotspots_show {
    margin-top: 100px;
 }
 
