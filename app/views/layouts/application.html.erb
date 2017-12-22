@@ -15,12 +15,12 @@
     <header class="navbar navbar-fixed-top navbar-inverse align-middle"> 
       <div class="container">
         <div class = "navbar-brand">
-          <%= link_to(image_tag("NCDB_logo_web.png", :class =>"rounded", :alt => "align-middle", height: 74, width: 310), "http://ncdiaperbank.org") %>
+          <%= link_to(image_tag("NCDB_logo_web.png", :class =>"rounded", :alt => "align-middle", height: 74, width: 310), "http://ncdiaperbank.org", target: :_blank) %>
         </div>
         <nav>
           <ul class="nav navbar-nav navbar-right align-center">
-            <li><%= link_to "About", 'http://ncdiaperbank.org/about-us-2/' %></li>
-            <li><%= link_to "Donate", 'http://ncdiaperbank.org/donate/' %></li>
+            <li><%= link_to "About", 'http://ncdiaperbank.org/about-us-2/', target: :_blank %></li>
+            <li><%= link_to "Donate", 'http://ncdiaperbank.org/donate/', target: :_blank %></li>
             <% if admin_signed_in? %>
               <li>
                 <%= link_to('Logout', destroy_admin_session_path, method: :delete) %>        
