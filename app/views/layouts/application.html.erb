@@ -6,11 +6,6 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-
-  <% if flash[:notice] %>
-    <div class="notice"><%= flash[:notice] %></div>
-  <% end %>
-  
   <body>
     <header class="navbar navbar-fixed-top navbar-inverse align-middle"> 
       <div class="container">
@@ -22,9 +17,8 @@
             <li><%= link_to "About", 'http://ncdiaperbank.org/about-us-2/', target: :_blank %></li>
             <li><%= link_to "Donate", 'http://ncdiaperbank.org/donate/', target: :_blank %></li>
             <% if admin_signed_in? %>
-              <li>
-                <%= link_to('Logout', destroy_admin_session_path, method: :delete) %>        
-              </li>
+              <li><%= link_to "Create", '/hotspots' %></li>
+              <li><%= link_to('Logout', destroy_admin_session_path, method: :delete) %></li>
             <% else %>
               <li>
                 <%= link_to('Login', new_admin_session_path)  %>  
@@ -32,11 +26,14 @@
             <% end %>
           </ul>
         </nav>
+        <section>
+          <% if flash[:notice] %>
+            <div class="notice"><%= flash[:notice] %></div>
+          <% end %>
+        </section>
       </div>
     </header>
-    <% if flash[:notice] %>
-      <div class="notice"><%= flash[:notice] %></div>
-    <% end %>
+    
     <div class="container">
       <%= yield %>
     </div>

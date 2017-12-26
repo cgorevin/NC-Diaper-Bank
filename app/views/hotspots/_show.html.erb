@@ -20,8 +20,9 @@
     <% end %>
     </a>
   <% end %>
+  <hr></hr>
   <% if admin_signed_in? %>
-        <%= link_to 'Add', "/hotspots/new", class: 'btn-btn default' %>
-    <% end %>
-  <%= link_to 'New Search',"/static_pages/home", class: 'btn-btd default' %>
+        <%= link_to 'Add', "/hotspots/new", class: 'btn btn-primary' %>
+  <% end %>
+  <%= link_to 'New Search',"/static_pages/home", class: 'btn btn-primary' %>
 </div>

@@ -37,6 +37,14 @@ textarea {
   margin-bottom: 10px;
 }
 
+ul {
+  position: absolute;
+    width: 50%;
+    right: 100px;
+    top: 40%;
+    display: inline;
+    text-align: center;
+}
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -81,6 +89,10 @@ p {
   line-height: 1.7em;
 }
 
+section{
+  font-size: 1.1em;
+  color: blue;
+}
 /* forms */
 
 #hotspots_form {
