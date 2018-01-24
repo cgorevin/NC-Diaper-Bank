@@ -21,7 +21,7 @@ class HotspotsController < ApplicationController
         else
             flash[:notice] = "Hotspot could not be saved."
         end
-        @hotspot.save
+
         redirect_to hotspots_path
     end
     
