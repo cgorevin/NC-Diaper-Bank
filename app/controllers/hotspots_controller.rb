@@ -26,7 +26,6 @@ class HotspotsController < ApplicationController
     
     def edit
         @hotspot = Hotspot.find(params[:id])
-        @hotspot.save
     end
     
     def update
@@ -36,7 +35,6 @@ class HotspotsController < ApplicationController
         else
             flash[:notice] = "There was an error updating the hotspot."
         end
-        @hotspot.save
         redirect_to hotspots_path(@hotspot)
     end
     
@@ -46,9 +44,6 @@ class HotspotsController < ApplicationController
             flash[:notice] = "The hotspot was deleted succesfully."
        
         redirect_to hotspots_path
-    end
-    
-    def show
     end
     
     private
