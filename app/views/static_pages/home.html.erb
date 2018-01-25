@@ -1,9 +1,10 @@
 <div class="container">
-  <h2>Welcome to the Hotspot Locator</h2>
   <div class="container">
     <div class="row">
       <div class="col-xs-0"></div>
       <div id = 'hotspots_form' class="col-xs-5">
+        <h3>Welcome to the Hotspot Locator</h3>
+        <p>Enter your address to find the nearest donation sight to you.</p>
         <%= form_for :user_address, url: { :controller => "hotspots", :action => "index" }, method: :get do |f| %>
           <div class="form-group">
             <%= f.text_field :street_address, placeholder: 'street address', class: 'form-control' %>
