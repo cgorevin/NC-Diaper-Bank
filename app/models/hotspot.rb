@@ -12,23 +12,24 @@ class Hotspot < ActiveRecord::Base
             obj.longitude = geo.longitude
             obj
         end
-    end   
+    end
     acts_as_mappable :lat_column_name => :latitude,
                      :lng_column_name => :longitude
-    
+
     def self.parse_address(geo_address)
         geo_address.split(",")
     end
-    
+
     def self.parse_zip_code(geo_address)
         geo_address.split(' ')
     end
-    
+
     def full_street_address
         [street_address, city, state, zip_code, country].compact.join(', ')
     end
-    
+
     def address_changed?
        street_address_changed? || city_changed? || zip_code_changed?
     end
+
 end

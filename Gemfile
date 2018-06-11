@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
- 
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 gem 'bootstrap-sass', '3.3.7'
@@ -17,6 +17,8 @@ gem 'devise'
 
 gem 'geocoder'
 gem 'geokit-rails'
+
+gem 'figaro'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -43,7 +45,7 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
   gem 'capybara'
-  gem 'factory_girl_rails'
+  gem 'factory_bot'
   gem 'faker'
   gem 'database_cleaner'
 end
