@@ -51,4 +51,6 @@ class HotspotsController < ApplicationController
     def hotspot_params
         params.require(:hotspot).permit(:title, :street_address, :city, :state, :zip_code, :phone_number)
     end
+
+    #test
 end
