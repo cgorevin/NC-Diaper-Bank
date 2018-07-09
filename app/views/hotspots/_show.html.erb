@@ -1,11 +1,11 @@
-<h4>Top 3 Donation Sites</h4>
+<h4>Donation Sites</h4>
 <div class="row">
     <div class="col-xs-0"></div>
     <div id = 'show_form' class="col-xs-5">
     <div class="list-group">
   <% @hotspots.each do |hotspot| %>
       <hr></hr>
-      <a href="http://maps.google.com/?q=<%="#{hotspot.latitude},#{hotspot.longitude}"%>" class="list-group-item active">
+      <a href="http://maps.google.com/?q=<%="#{hotspot.latitude},#{hotspot.longitude}"%>" target="_blank" class="list-group-item active">
             <h4 class="list-group-item-heading"><tbody>
                   <tr>
                    <%= hotspot.title %>

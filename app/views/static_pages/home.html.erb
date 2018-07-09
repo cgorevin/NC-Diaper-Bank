@@ -4,7 +4,7 @@
       <div class="col-xs-0"></div>
       <div id = 'hotspots_form' class="col-xs-5">
         <h3>Welcome to the Hotspot Locator</h3>
-        <p>Enter your address to find the nearest donation sight to you.</p>
+        <p>Enter your address to find the nearest donation site to you.</p>
         <%= form_for :user_address, url: { :controller => "hotspots", :action => "index" }, method: :get do |f| %>
           <div class="form-group">
             <%= f.text_field :street_address, placeholder: '123 W Main St, Durham, NC 27705', class: 'form-control' %>
