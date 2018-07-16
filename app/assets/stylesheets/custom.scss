@@ -3,18 +3,8 @@
 
 /* universal */
 
-.navbar {
-  height: 147px;
-  background-image: url(asset-path('NC_Diaper_Bank_fabric_plaid.png'));
-}
-
-.navbar-brand {
-    position: absolute;
-    width: 50%;
-    left: 0;
-    top: 15%;
-    text-align: center;
-    margin: auto;
+.buttons {
+  margin-top: 10px;
 }
 
 body {
@@ -107,4 +97,25 @@ input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
+}
+
+/* navbar */
+
+.navbar {
+  height: 147px;
+  background-image: url(asset-path('NC_Diaper_Bank_fabric_plaid.png'));
+}
+
+.navbar-brand {
+    position: absolute;
+    width: 50%;
+    left: 0;
+    top: 15%;
+    text-align: center;
+    margin: auto;
+}
+
+#toggle-button {
+  margin-top: auto;
+  margin-bottom: auto;
 }

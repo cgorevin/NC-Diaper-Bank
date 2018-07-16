@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171206235138) do
+ActiveRecord::Schema.define(version: 20180710180530) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20171206235138) do
     t.float    "longitude"
     t.string   "website"
     t.string   "county"
+    t.float    "distance"
   end
 
 end

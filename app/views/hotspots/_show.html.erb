@@ -1,28 +1,48 @@
 <h4>Donation Sites</h4>
-<div class="row">
+  <div class="row">
     <div class="col-xs-0"></div>
-    <div id = 'show_form' class="col-xs-5">
-    <div class="list-group">
-  <% @hotspots.each do |hotspot| %>
-      <hr></hr>
-      <a href="http://maps.google.com/?q=<%="#{hotspot.latitude},#{hotspot.longitude}"%>" target="_blank" class="list-group-item active">
-            <h4 class="list-group-item-heading"><tbody>
-                  <tr>
-                   <%= hotspot.title %>
-                  </tr>
+      <div id = 'show_form' class="col-xs-5">
+        <div class="list-group">
+          <% @hotspots.each do |hotspot| %>
+            <hr></hr>
+              <div class="list-group-item active">
+                <h4 class="list-group-item-heading"><tbody>
+                      <tr><%= hotspot.title %></tr>
                 </h4>
-            <p class="list-group-item-text"><%= hotspot.street_address %></p>
-            <p><%= hotspot.city %>, <%= hotspot.state %> <%= hotspot.zip_code %></p>
-            <p class="list-group-item-text"><%= hotspot.phone_number %></p>
-      <div class="col-xs-7"></div>
-  <% if admin_signed_in? %>
-        <%= link_to 'Edit', "/hotspots/#{hotspot.id}/edit", class: 'btn-btn default' %>
-    <% end %>
-    </a>
-  <% end %>
-  <hr></hr>
-  <% if admin_signed_in? %>
-        <%= link_to 'Add', "/hotspots/new", class: 'btn btn-primary' %>
-  <% end %>
-  <%= link_to 'New Search',"/static_pages/home", class: 'btn btn-primary' %>
-</div>
+                  <p class="list-group-item-text"><%= hotspot.street_address %></p>
+                  <p><%= hotspot.city %>, <%= hotspot.state %> <%= hotspot.zip_code %></p>
+                  <p class="list-group-item-text"><%= hotspot.phone_number %></p>
+                  <!--THIS IS THE LINE I NEED TO FIX-->
+                  <p>Distance: <%= hotspot.distance %></p>
+              </div>
+                <p class="buttons">
+                  <a href="http://maps.google.com/?q=<%="#{hotspot.latitude},#{hotspot.longitude}"%>" target="_blank" class="btn btn-primary">Driving Directions</a>
+                  <%= link_to 'Website', "#{hotspot.website}", target: :_blank, class: 'btn btn-primary' %>
+                </p>
+        <% if admin_signed_in? %>
+              <%= link_to 'Edit', "/hotspots/#{hotspot.id}/edit", class: 'btn-btn default' %>
+          <% end %>
+        <% end %>
+          <hr></hr>
+          <% if admin_signed_in? %>
+                <%= link_to 'Add', "/hotspots/new", class: 'btn btn-primary' %>
+          <% end %>
+          <%= link_to 'New Search',"/static_pages/home", class: 'btn btn-primary' %>
+        </div>
+      </div>
+      <div class="col-xs-1"></div>
+      <div class="col-xs-6">
+        <div class="list-group">
+          <hr></hr>
+          <div class="list-group-item active">
+            <h3 class="list-group-item-heading">What should I donate?</h3>
+            <p class="list-group-item-text">Here's a list of the things we need:</p>
+              <li class="list-group-item active">Diapers, opened and new packages</li>
+              <li class="list-group-item active">Feminine hygiene supplies</li>
+              <li class="list-group-item active">Girls underwear</li>
+              <li class="list-group-item active">Adult incontinence supplies</li>
+              <li class="list-group-item active">Baby formula</li>
+          </div>
+        </div>
+      </div>
+    </div>

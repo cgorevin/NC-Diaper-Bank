@@ -1,39 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Workspace</title>
+  <title>Diaper Bank of North Carolina</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse align-middle">
-      <div class="container">
-        <div class = "navbar-brand">
-          <%= link_to(image_tag("NCDB_logo_web.png", :class =>"rounded", :alt => "align-middle", height: 74, width: 310), "http://ncdiaperbank.org", target: :_blank) %>
+    <header>
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsing-nav">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class = "navbar-brand">
+              <%= link_to(image_tag("NCDB_logo_web.png", :class =>"rounded", :alt => "align-middle", height: 74, width: 310), "http://ncdiaperbank.org", target: :_blank) %>
+            </div>
+          </div>
+          <div class="collapse navbar-collapse" id="collapsing-nav">
+            <ul class="nav navbar-nav">
+              <li class="nav-item"><%= link_to "Search", '/', class: 'nav-link' %></li>
+              <li class="nav-item"><%= link_to "About", 'https://ncdiaperbank.org/about-us/', target: :_blank, class: 'nav-link' %></li>
+              <li class="nav-item"><%= link_to "Donate", 'http://ncdiaperbank.org/donate/', target: :_blank, class: 'nav-link' %></li>
+              <% if admin_signed_in? %>
+                <li class="nav-item"><%= link_to "Create", '/hotspots', class: 'nav-link' %></li>
+                <li class="nav-item"><%= link_to('Logout', destroy_admin_session_path, method: :delete, class: 'nav-link') %></li>
+              <% else %>
+                <li class="nav-item">
+                  <%= link_to('Admin', new_admin_session_path, class: 'nav-link') %>
+                </li>
+              <% end %>
+            </ul>
+          </div><!--/.nav-collapse -->
         </div>
-        <nav>
-          <ul class="nav navbar-nav navbar-right align-center">
-            <li><%= link_to "About", 'https://ncdiaperbank.org/about-us/', target: :_blank %></li>
-            <li><%= link_to "Donate", 'http://ncdiaperbank.org/donate/', target: :_blank %></li>
-            <% if admin_signed_in? %>
-              <li><%= link_to "Create", '/hotspots' %></li>
-              <li><%= link_to('Logout', destroy_admin_session_path, method: :delete) %></li>
-            <% else %>
-              <li>
-                <%= link_to('Login', new_admin_session_path)  %>
-              </li>
-            <% end %>
-          </ul>
-        </nav>
-        <section>
-          <% if flash[:notice] %>
-            <div class="notice"><%= flash[:notice] %></div>
-          <% end %>
-        </section>
       </div>
     </header>
-
     <div class="container">
       <%= yield %>
     </div>
