@@ -10,12 +10,19 @@ class Hotspot < ActiveRecord::Base
             obj.zip_code = parse_zip_code(geo.address)[-2].chomp(',')
             obj.latitude = geo.latitude
             obj.longitude = geo.longitude
-            obj.distance = geo.distance
             obj
         end
     end
     acts_as_mappable :lat_column_name => :latitude,
                      :lng_column_name => :longitude
+
+    def get_distance(hotspot)
+      distance = Geocoder::Calculations.distance_between(
+        [self.latitude, self.longitude], [hotspot.latitude, hotspot.longitude]
+      )
+
+      distance.round(1)
+    end
 
     def self.parse_address(geo_address)
         geo_address.split(",")

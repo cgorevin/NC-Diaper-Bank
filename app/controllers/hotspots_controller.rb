@@ -2,6 +2,10 @@ class HotspotsController < ApplicationController
     before_action :authenticate_admin!, :except => [:show, :index]
 
     def index
+      user_addr = params[:user_address]
+      @current_location = Hotspot.new(street_address: user_addr[:street_address], city: user_addr[:city], zip_code: user_addr[:zip_code])
+      @current_location.geocode
+
         if params[:user_address]
             @hotspots = Hotspot.by_distance(origin: params["user_address"]["street_address"]).limit(3)
         else

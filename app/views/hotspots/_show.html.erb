@@ -1,3 +1,4 @@
+
 <h4>Donation Sites</h4>
   <div class="row">
     <div class="col-xs-0"></div>
@@ -12,8 +13,7 @@
                   <p class="list-group-item-text"><%= hotspot.street_address %></p>
                   <p><%= hotspot.city %>, <%= hotspot.state %> <%= hotspot.zip_code %></p>
                   <p class="list-group-item-text"><%= hotspot.phone_number %></p>
-                  <!--THIS IS THE LINE I NEED TO FIX-->
-                  <p>Distance: <%= hotspot.distance %></p>
+                  <p>Distance: <%= hotspot.get_distance(@current_location) %> miles</p>
               </div>
                 <p class="buttons">
                   <a href="http://maps.google.com/?q=<%="#{hotspot.latitude},#{hotspot.longitude}"%>" target="_blank" class="btn btn-primary">Driving Directions</a>

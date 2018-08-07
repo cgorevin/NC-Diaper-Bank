@@ -56,7 +56,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #777;
+  color: #424242;
 }
 
 h4 {
@@ -66,7 +66,7 @@ h4 {
   margin-bottom: 15px;
   text-align: left;
   font-weight: normal;
-  color: #777;
+  color: #424242;
 }
 
 hr {
@@ -99,6 +99,10 @@ input, textarea, select, .uneditable-input {
   margin-bottom: 15px;
 }
 
+#city_search {
+  padding-left: 0px;
+}
+
 /* navbar */
 
 .navbar {
@@ -116,6 +120,6 @@ input, textarea, select, .uneditable-input {
 }
 
 #toggle-button {
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-top: 53px;
+  margin-right: 20px;
 }
