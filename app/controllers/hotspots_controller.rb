@@ -7,7 +7,7 @@ class HotspotsController < ApplicationController
       @current_location.geocode
 
         if params[:user_address]
-            @hotspots = Hotspot.by_distance(origin: params["user_address"]["street_address"]).limit(3)
+            @hotspots = Hotspot.near([@current_location.latitude, @current_location.longitude]).limit(3)
         else
             @hotspots = Hotspot.all
         end
