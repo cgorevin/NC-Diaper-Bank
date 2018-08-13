@@ -29,12 +29,13 @@ textarea {
 
 ul {
   position: absolute;
-    width: 50%;
-    right: 100px;
-    top: 40%;
-    display: inline;
-    text-align: center;
+  width: 50%;
+  right: 100px;
+  top: 40%;
+  display: inline;
+  text-align: center;
 }
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -83,10 +84,11 @@ section{
   font-size: 1.1em;
   color: blue;
 }
+
 /* forms */
 
 #hotspots_form {
-   margin-top: 100px;
+  margin-top: 100px;
 }
 
 #hotspots_show {
@@ -103,6 +105,10 @@ input, textarea, select, .uneditable-input {
   padding-left: 0px;
 }
 
+#zip_search {
+  padding-left: 0px;
+}
+
 /* navbar */
 
 .navbar {
@@ -110,16 +116,42 @@ input, textarea, select, .uneditable-input {
   background-image: url(asset-path('NC_Diaper_Bank_fabric_plaid.png'));
 }
 
-.navbar-brand {
-    position: absolute;
-    width: 50%;
-    left: 0;
-    top: 15%;
-    text-align: center;
-    margin: auto;
+.nav-flex-container {
+  height: 147px;
+  width: 100%;
+  // flex stuff
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#toggle-button {
-  margin-top: 53px;
-  margin-right: 20px;
+.dropdown-menu{
+  position: static;
+}
+
+.dropdown.full-width {
+  width: 120px;
+  height: 100%;
+  background-image: url(asset-path('NC_Diaper_Bank_fabric_plaid.png'));
+
+}
+
+.full-width.dropdown > li > a {
+  white-space: normal;
+}
+
+#logo {
+  height: 60px;
+  padding-left: 10px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #3a3434;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+  text-decoration: underline;
+  text-decoration-color: #3a3434;
+  text-decoration-style: double;
+  color:  #3a3434;
 }

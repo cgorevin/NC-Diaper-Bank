@@ -1,24 +1,37 @@
 <div class="container">
   <div class="container">
     <div class="row">
-      <div class="col-xs-0"></div>
-      <div id = 'hotspots_form' class="col-xs-5">
+      <div class="col-md-0"></div>
+      <div id = 'hotspots_form' class="col-md-5">
         <h3>Welcome to the Hotspot Locator</h3>
         <p>Enter your address to find the nearest donation site to you.</p>
         <%= form_for :user_address, url: { :controller => "hotspots", :action => "index" }, method: :get do |f| %>
           <div class="form-group">
             <%= f.text_field :street_address, placeholder: 'Address', class: 'form-control' %>
           </div>
-          <div class="form-group col-xs-3" id="city_search">
+          <div class="form-group col-md-3" id="city_search">
             <%= f.text_field :city, placeholder: 'City', class: 'form-control' %>
           </div>
-          <div class="form-group col-xs-3">
+          <div class="form-group col-md-3" id="zip_search">
             <%= f.text_field :zip_code, placeholder: 'Zip', class: 'form-control' %>
           </div>
           <%= f.submit 'Save', class:'btn btn btn-primary button_margins' %>
         <% end %>
       </div>
-      <div class="col-xs-7"></div>
+      <div class="col-md-7"></div>
+      test. this should appear to the left on laptop screens.
+      <%# <div class="list-group">
+        <hr></hr>
+        <div class="list-group-item active">
+          <h3 class="list-group-item-heading">What should I donate?</h3>
+          <p class="list-group-item-text">Here's a list of the things we need:</p>
+            <li class="list-group-item active">Diapers, opened and new packages</li>
+            <li class="list-group-item active">Feminine hygiene supplies</li>
+            <li class="list-group-item active">Girls underwear</li>
+            <li class="list-group-item active">Adult incontinence supplies</li>
+            <li class="list-group-item active">Baby formula</li>
+        </div>
+      </div> %>
     </div>
   </div>
 </div>
