@@ -10,7 +10,7 @@
 </head>
   <body>
     <header>
-      <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar navbar-inverse navbar-fixed-top" id="myNav">
         <div class="container">
           <div class="navbar-header">
             <div class="nav-flex-container">
@@ -28,7 +28,8 @@
               <li class="nav-item dropdown full-width"><%= link_to "About", 'https://ncdiaperbank.org/about-us/', target: :_blank, class: 'nav-link' %></li>
               <li class="nav-item dropdown full-width"><%= link_to "Donate", 'http://ncdiaperbank.org/donate/', target: :_blank, class: 'nav-link' %></li>
               <% if admin_signed_in? %>
-                <li class="nav-item dropdown full-width"><%= link_to "Create", '/hotspots', class: 'nav-link' %></li>
+                <li class="nav-item dropdown full-width"><%= link_to "Hotspots", '/hotspots', class: 'nav-link' %></li>
+                <li class="nav-item dropdown full-width"><%= link_to "Create", '/hotspots/new', class: 'nav-link' %></li>
                 <li class="nav-item dropdown full-width"><%= link_to('Logout', destroy_admin_session_path, method: :delete, class: 'nav-link') %></li>
               <% else %>
                 <li class="nav-item dropdown full-width">
@@ -40,7 +41,7 @@
         </div>
       </div>
     </header>
-    <div class="container">
+    <div class="container body-container">
       <%= yield %>
     </div>
   </body>

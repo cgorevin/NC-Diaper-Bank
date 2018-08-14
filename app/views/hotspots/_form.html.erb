@@ -1,7 +1,8 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-0"></div>
-<div id = 'hotspots_form' class="col-xs-5">
+    <div class="col-md-0"></div>
+<div id = 'hotspots_form' class="col-md-5">
+    <hr />
     <%= form_for @hotspot do |f| %>
       <div class="form-group">
         <%= f.text_field :title, placeholder: 'Title', class: 'form-control' %>
@@ -24,9 +25,9 @@
       <div class="form-group">
           <%= f.text_field :website, placeholder: 'Website', class: 'form-control'%>
       </div>
-      <%= f.submit 'Save', class:'btn btn btn-primary button_margins' %>
+      <%= f.submit 'Save', class:'btn btn btn-primary buttons' %>
     <% end %>
     </div>
-    <div class="col-xs-7"></div>
+    <div class="col-md-7"></div>
   </div>
 </div>

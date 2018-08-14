@@ -13,7 +13,9 @@
                   <p class="list-group-item-text"><%= hotspot.street_address %></p>
                   <p><%= hotspot.city %>, <%= hotspot.state %> <%= hotspot.zip_code %></p>
                   <p class="list-group-item-text"><%= hotspot.phone_number %></p>
+                  <% if @current_location.present? %>
                   <p>Distance: <%= hotspot.get_distance(@current_location) %> miles</p>
+                  <% end %>
               </div>
                   <p class="buttons">
                     <a href="http://maps.google.com/?q=<%="#{hotspot.latitude},#{hotspot.longitude}"%>" target="_blank" class="btn btn-primary">Directions</a>

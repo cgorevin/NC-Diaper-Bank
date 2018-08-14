@@ -40,4 +40,12 @@ class Hotspot < ActiveRecord::Base
        street_address_changed? || city_changed? || zip_code_changed?
     end
 
+    def self.address_sort(current_location)
+        self.near([current_location.latitude, current_location.longitude])
+             .limit(3)
+             .sort_by do |hotspot|
+               hotspot.get_distance(current_location)
+             end
+    end
+
 end
