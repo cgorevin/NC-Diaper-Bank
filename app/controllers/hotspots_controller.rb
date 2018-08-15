@@ -9,7 +9,7 @@ class HotspotsController < ApplicationController
             @current_location.geocode
             @hotspots = Hotspot.address_sort(@current_location)
         else
-            @hotspots = Hotspot.all
+            @hotspots = Hotspot.order(city: :asc).page(params[:page])
         end
     end
 
