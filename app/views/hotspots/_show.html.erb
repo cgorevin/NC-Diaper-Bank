@@ -22,6 +22,7 @@
                     <%= link_to 'Website', "#{hotspot.website}", target: :_blank, class: 'btn btn-primary' %>
                     <% if admin_signed_in? %>
                           <%= link_to 'Edit', "/hotspots/#{hotspot.id}/edit", class: 'btn btn-primary' %>
+                          <%= link_to 'Delete', @hotspot, method: :delete, class:'btn btn-primary' %>
                       <% end %>
                     <% end %>
                   </p>
