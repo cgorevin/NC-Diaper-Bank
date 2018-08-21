@@ -31,11 +31,8 @@
                 <%= link_to 'Add', "/hotspots/new", class: 'btn btn-primary' %>
           <% end %>
           <%= link_to 'New Search',"/static_pages/home", class: 'btn btn-primary' %>
-          <p>
-            <%= paginate @hotspots if @current_location.blank? %>
-          </p>
         </div>
-      </div>
-      <div class="col-md-7">
+        <%= paginate @hotspots if @current_location.blank? %>
+
       </div>
     </div>

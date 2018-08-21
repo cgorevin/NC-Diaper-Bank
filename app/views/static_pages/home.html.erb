@@ -9,11 +9,13 @@
           <div class="form-group">
             <%= f.text_field :street_address, placeholder: 'Address', class: 'form-control' %>
           </div>
-          <div class="form-group col-md-3" id="city_search">
-            <%= f.text_field :city, placeholder: 'City', class: 'form-control' %>
-          </div>
-          <div class="form-group col-md-3" id="zip_search">
-            <%= f.text_field :zip_code, placeholder: 'Zip', class: 'form-control' %>
+          <div class="form-row">
+            <div class="form-group col-md-4" id="city_search">
+              <%= f.text_field :city, placeholder: 'City', class: 'form-control' %>
+            </div>
+            <div class="form-group col-md-3" id="zip_search">
+              <%= f.text_field :zip_code, placeholder: 'Zip', class: 'form-control' %>
+            </div>
           </div>
           <%= f.submit 'Save', class:'btn btn btn-primary button_margins' %>
         <% end %>

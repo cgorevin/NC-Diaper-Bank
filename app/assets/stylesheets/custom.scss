@@ -113,6 +113,11 @@ input, textarea, select, .uneditable-input {
   padding-right: 15px;
 }
 
+.inline-form-box {
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+
 /* navbar */
 
 .navbar {
@@ -157,4 +162,15 @@ input, textarea, select, .uneditable-input {
 #logo {
   height: 60px;
   padding-left: 10px;
+}
+
+/* random */
+
+ul.pagination {
+  position: static;
+  margin-top: 5px;
+}
+
+.flash-width {
+  width: 40%;
 }

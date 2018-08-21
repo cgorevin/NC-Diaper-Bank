@@ -1,33 +1,40 @@
 <div class="container">
   <div class="row">
     <div class="col-md-0"></div>
-<div id = 'hotspots_form' class="col-md-5">
+<div id = 'hotspots_form' class="col-md-6">
     <hr />
     <%= form_for @hotspot do |f| %>
-      <div class="form-group">
-        <%= f.text_field :title, placeholder: 'Title', class: 'form-control' %>
+      <div class="form-row">
+        <div class="form-group col-md-5 inline-form-box">
+          <%= f.text_field :title, placeholder: 'Title', class: 'form-control' %>
+        </div>
+        <div class="form-group col-md-7 inline-form-box">
+          <%= f.text_field :street_address, placeholder: 'Address', class: 'form-control' %>
+        </div>
       </div>
-      <div class="form-group">
-        <%= f.text_field :street_address, placeholder: 'Address', class: 'form-control' %>
-      </div>
-      <div class="form-group">
-        <%= f.text_field :city, placeholder: 'City', class: 'form-control' %>
-      </div>
-      <div class="form-group">
-          <%= f.text_field :state, placeholder: 'State', class: 'form-control'%>
-      </div>
-      <div class="form-group">
+      <div class="form-row">
+        <div class="form-group col-md-4 inline-form-box">
+          <%= f.text_field :city, placeholder: 'City', class: 'form-control' %>
+        </div>
+        <div class="form-group col-md-5 inline-form-box">
+          <%= f.text_field :state, :value => 'North Carolina', class: 'form-control'%>
+        </div>
+        <div class="form-group col-md-3 inline-form-box">
           <%= f.number_field :zip_code, placeholder: 'Zip code', class: 'form-control'%>
+        </div>
       </div>
-      <div class="form-group">
-          <%= f.text_field :phone_number, placeholder: 'Phone number', class: 'form-control'%>
+      <div class="form-row">
+        <div class="form-group col-md-6 inline-form-box">
+            <%# WAS f.text_field. Trying f.telephone_field to see if it'll be fancier/prettier %>
+            <%= f.telephone_field :phone_number, placeholder: 'Phone number', class: 'form-control'%>
+        </div>
+        <div class="form-group col-md-6 inline-form-box">
+            <%= f.text_field :website, placeholder: 'Website', class: 'form-control'%>
+        </div>
       </div>
-      <div class="form-group">
-          <%= f.text_field :website, placeholder: 'Website', class: 'form-control'%>
-      </div>
-      <%= f.submit 'Save', class:'btn btn btn-primary buttons' %>
+      <%= f.submit 'Save', class:'btn btn-primary buttons' %>
     <% end %>
     </div>
-    <div class="col-md-7"></div>
+    <div class="col-md-6"></div>
   </div>
 </div>

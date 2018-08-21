@@ -19,10 +19,14 @@ class HotspotsController < ApplicationController
 
     def create
         @hotspot = Hotspot.create(hotspot_params)
+
+        puts "ERRORS: #{@hotspot.errors.to_a}"
+        puts "VALID?: #{@hotspot.valid?}"
+
         if @hotspot.valid?
-            flash[:notice] = "Hotspot created succesfully."
+            flash[:success] = "Hotspot created succesfully."
         else
-            flash[:notice] = "Hotspot could not be saved."
+            flash[:alert] = "Hotspot could not be saved."
         end
 
         redirect_to hotspots_path
@@ -35,9 +39,9 @@ class HotspotsController < ApplicationController
     def update
         @hotspot = Hotspot.find(params[:id])
         if @hotspot.update_attributes(hotspot_params)
-            flash[:notice] = "Hotspot updated succesfully."
+            flash[:success] = "Hotspot updated succesfully."
         else
-            flash[:notice] = "There was an error updating the hotspot."
+            flash[:alert] = "There was an error updating the hotspot."
         end
         redirect_to hotspots_path(@hotspot)
     end
@@ -53,7 +57,7 @@ class HotspotsController < ApplicationController
     private
 
     def hotspot_params
-        params.require(:hotspot).permit(:title, :street_address, :city, :state, :zip_code, :phone_number)
+        params.require(:hotspot).permit(:title, :street_address, :city, :state, :zip_code, :phone_number, :website)
     end
 
     #test

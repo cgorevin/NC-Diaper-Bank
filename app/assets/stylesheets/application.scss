@@ -14,3 +14,8 @@
  *= require_tree .
  *= require_self
  */
+
+@import 'bootstrap/variables';
+@import 'bootstrap/mixins';
+
+@import 'bootstrap/alerts'
