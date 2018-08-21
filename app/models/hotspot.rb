@@ -47,7 +47,7 @@ class Hotspot < ActiveRecord::Base
              # .to_a
              # .sort_by do |hotspot|
              #   hotspot.get_distance(current_location)
-             end
+             #end
     end
 
 end
