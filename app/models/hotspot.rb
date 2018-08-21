@@ -44,6 +44,7 @@ class Hotspot < ActiveRecord::Base
     def self.address_sort(current_location)
         self.near([current_location.latitude, current_location.longitude])
              .limit(3)
+             .to_a
              .sort_by do |hotspot|
                hotspot.get_distance(current_location)
              end
