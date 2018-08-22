@@ -40,10 +40,11 @@ class HotspotsController < ApplicationController
         @hotspot = Hotspot.find(params[:id])
         if @hotspot.update_attributes(hotspot_params)
             flash[:success] = "Hotspot updated succesfully."
+            redirect_to hotspots_path(@hotspot)
         else
             flash[:alert] = "There was an error updating the hotspot."
+            render 'edit'
         end
-        redirect_to hotspots_path(@hotspot)
     end
 
     def destroy
