@@ -25,11 +25,11 @@ class HotspotsController < ApplicationController
 
         if @hotspot.valid?
             flash[:success] = "Hotspot created succesfully."
+            redirect_to hotspots_path
         else
             flash[:alert] = "Hotspot could not be saved."
+            render 'new'
         end
-
-        redirect_to hotspots_path
     end
 
     def edit

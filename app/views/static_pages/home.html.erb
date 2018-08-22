@@ -4,16 +4,16 @@
       </div>
       <div id = 'hotspots_form' class="col-md-5">
         <h3>Welcome to the Hotspot Locator</h3>
-        <p>Enter your address to find the nearest donation site to you.</p>
+        <p>Enter your address to find the nearest donation sites to you.</p>
         <%= form_for :user_address, url: { :controller => "hotspots", :action => "index" }, method: :get do |f| %>
-          <div class="form-group">
+          <div class="form-group col-md-12 address_search">
             <%= f.text_field :street_address, placeholder: 'Address', class: 'form-control' %>
           </div>
           <div class="form-row">
-            <div class="form-group col-md-4" id="city_search">
+            <div class="form-group col-md-5 inline-form-box" id="city_search">
               <%= f.text_field :city, placeholder: 'City', class: 'form-control' %>
             </div>
-            <div class="form-group col-md-3" id="zip_search">
+            <div class="form-group col-md-4 inline-form-box" id="zip_search">
               <%= f.text_field :zip_code, placeholder: 'Zip', class: 'form-control' %>
             </div>
           </div>
