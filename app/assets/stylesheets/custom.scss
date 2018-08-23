@@ -5,9 +5,16 @@
 
 .btn-primary {
   margin-top: 10px;
-  background-color: #2ba9de;
-  border-color: #2ba9de;
+  background-color: #25aae1;
+  border-color: #25aae1;
   font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  border-radius: 0;
 }
 
 body {
@@ -60,8 +67,8 @@ h2 {
 }
 
 h4 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
+  font-size: 1.4em;
+  letter-spacing: 0.5px;
   margin-bottom: 15px;
   text-align: left;
   font-weight: normal;
@@ -193,13 +200,62 @@ input, textarea, select, .uneditable-input {
   text-align: center;
 }
 
-/* random */
+/* hotspots_path */
 
 ul.pagination {
   position: static;
   margin-top: 5px;
 }
 
+.hotspot-div {
+  background-color: #25aae1;
+  border-color: #25aae1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.hotspot-heading {
+  margin-bottom: 5px;
+}
+
+/* random */
+
 .flash-width {
   width: 40%;
+}
+
+/* homepage */
+
+.donation-div {
+  background-color: #25aae1;
+  border-color: #25aae1;
+  padding-top: 2px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 10px;
+}
+
+.donation-items {
+  color: #ffffff;
+  font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  line-height: 32.4px;
+}
+
+.donation-items-list {
+  color: #ffffff;
+  font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  line-height: 32.4px;
+  padding-left: 15px;
+  list-style-type: disc;
 }

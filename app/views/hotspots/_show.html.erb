@@ -1,13 +1,13 @@
 
-<h4>Donation Sites</h4>
+<h3>Donation Sites</h3>
   <div class="row">
     <div class="col-md-0"></div>
       <div id = 'show_form' class="col-md-5">
-        <div class="list-group">
+        <div>
           <% @hotspots.each do |hotspot| %>
             <hr></hr>
-              <div class="list-group-item active">
-                <h4 class="list-group-item-heading"><tbody>
+              <div class="hotspot-div">
+                <h4 class="hotspot-heading"><tbody>
                       <tr><%= hotspot.title %></tr>
                 </h4>
                   <p class="list-group-item-text"><%= hotspot.street_address %></p>
@@ -17,7 +17,7 @@
                   <p>Distance: <%= hotspot.get_distance(@current_location) %> miles</p>
                   <% end %>
               </div>
-                  <p class="buttons">
+                  <p>
                     <a href="http://maps.google.com/?q=<%="#{hotspot.latitude},#{hotspot.longitude}"%>" target="_blank" class="btn btn-primary">Directions</a>
                     <%= link_to 'Website', "#{hotspot.website}", target: :_blank, class: 'btn btn-primary' %>
                     <% if admin_signed_in? %>
