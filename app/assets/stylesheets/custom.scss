@@ -3,8 +3,11 @@
 
 /* universal */
 
-.buttons {
+.btn-primary {
   margin-top: 10px;
+  background-color: #2ba9de;
+  border-color: #2ba9de;
+  font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 body {
@@ -35,6 +38,8 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+  color: #dd2343;
+  font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 h1 {
@@ -52,7 +57,6 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #424242;
 }
 
 h4 {
@@ -61,7 +65,6 @@ h4 {
   margin-bottom: 15px;
   text-align: left;
   font-weight: normal;
-  color: #424242;
 }
 
 hr {
@@ -72,6 +75,8 @@ hr {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  color: rgba(8,0,26,.7);
+  font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 section{
@@ -101,7 +106,7 @@ input, textarea, select, .uneditable-input {
 }
 
 .create-edit-form {
-  padding-left: 15px;
+  padding-left: 0px;
   padding-right: 15px;
 }
 
@@ -164,14 +169,14 @@ input, textarea, select, .uneditable-input {
 }
 
 .navbar-inverse .navbar-nav > li > a {
-  color: #3a3434;
+  color: rgba(8,0,26,.7);
 }
 
 .navbar-inverse .navbar-nav > li > a:hover {
   text-decoration: underline;
-  text-decoration-color: #3a3434;
+  text-decoration-color: rgba(8,0,26,.7);
   text-decoration-style: double;
-  color:  #3a3434;
+  color:  rgba(8,0,26,.7);
 }
 
 #logo {

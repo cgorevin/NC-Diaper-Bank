@@ -18,12 +18,8 @@ class HotspotsController < ApplicationController
     end
 
     def create
-
-        # @hotspot = Hotspot.create(hotspot_params)
         @hotspot = Hotspot.new(hotspot_params)
 
-
-        # if @hotspot.valid?
         if @hotspot.save
             flash[:success] = "Hotspot created succesfully."
             redirect_to hotspots_path
@@ -43,7 +39,6 @@ class HotspotsController < ApplicationController
             flash[:success] = "Hotspot updated succesfully."
             redirect_to hotspots_path(@hotspot)
         else
-            flash[:alert] = "There was an error updating the hotspot."
             render 'edit'
         end
     end
