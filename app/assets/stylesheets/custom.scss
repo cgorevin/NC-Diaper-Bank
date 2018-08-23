@@ -27,15 +27,6 @@ textarea {
   margin-bottom: 10px;
 }
 
-ul {
-  position: absolute;
-  width: 60%;
-  right: 100px;
-  top: 40%;
-  display: inline;
-  text-align: center;
-}
-
 .body-container {
   margin-top: 100px;
 }
@@ -124,10 +115,10 @@ input, textarea, select, .uneditable-input {
 }
 
 #error_explanation {
-  color: red;
+  color: #a94442;
   ul {
-    color: red;
-    margin: 0 0 30px 0;
+    color: #a94442;
+    margin-bottom: 5px;
   }
 }
 
@@ -186,6 +177,15 @@ input, textarea, select, .uneditable-input {
 #logo {
   height: 60px;
   padding-left: 10px;
+}
+
+.navbar-style {
+  position: absolute;
+  width: 60%;
+  right: 100px;
+  top: 40%;
+  display: inline;
+  text-align: center;
 }
 
 /* random */
