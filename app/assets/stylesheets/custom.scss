@@ -205,6 +205,18 @@ input, textarea, select, .uneditable-input {
 ul.pagination {
   position: static;
   margin-top: 5px;
+  font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+  background-color: #25aae1;
+  border-color: #25aae1;
+  border-radius: 0;
+}
+
+.pagination > li > a, .pagination > li > span {
+  color: #25aae1;
+  border-radius: 0;
 }
 
 .hotspot-div {
@@ -218,6 +230,15 @@ ul.pagination {
 
 .hotspot-heading {
   margin-bottom: 5px;
+}
+
+.hotspot-list-text {
+  color: #fff;
+  margin-bottom: 0px;
+}
+
+.hotspot-alternate {
+  color: #004080;
 }
 
 /* random */

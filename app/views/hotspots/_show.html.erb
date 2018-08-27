@@ -10,11 +10,11 @@
                 <h4 class="hotspot-heading"><tbody>
                       <tr><%= hotspot.title %></tr>
                 </h4>
-                  <p class="list-group-item-text"><%= hotspot.street_address %></p>
-                  <p><%= hotspot.city %>, <%= hotspot.state %> <%= hotspot.zip_code %></p>
-                  <p class="list-group-item-text"><%= hotspot.phone_number %></p>
+                  <p class="hotspot-list-text"><%= hotspot.street_address %></p>
+                  <p class="hotspot-alternate"><%= hotspot.city %>, <%= hotspot.state %> <%= hotspot.zip_code %></p>
+                  <p class="hotspot-list-text"><%= hotspot.phone_number %></p>
                   <% if @current_location.present? %>
-                  <p>Distance: <%= hotspot.get_distance(@current_location) %> miles</p>
+                  <p class="hotspot-alternate">Distance: <%= hotspot.get_distance(@current_location) %> miles</p>
                   <% end %>
               </div>
                   <p>
