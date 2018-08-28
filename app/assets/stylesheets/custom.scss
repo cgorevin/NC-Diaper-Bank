@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'sass';
 
 /* universal */
 
@@ -15,6 +16,10 @@
   letter-spacing: 2px;
   color: #ffffff;
   border-radius: 0;
+}
+
+.buttons {
+  margin-bottom: 20px;
 }
 
 body {
@@ -166,7 +171,12 @@ input, textarea, select, .uneditable-input {
 }
 
 .dropdown.full-width {
-  width: 120px;
+  @include mobile {
+    width: auto;
+  }
+  @include desktop {
+    width: 120px;
+  }
   height: 100%;
   background-image: url(asset-path('NC_Diaper_Bank_fabric_plaid.png'));
 }
@@ -192,10 +202,16 @@ input, textarea, select, .uneditable-input {
 }
 
 .navbar-style {
+  @include mobile {
+    width: 100%;
+    top: 97%;
+  }
+  @include desktop {
+    right: 100px;
+    width: 60%;
+    top: 40%;
+  }
   position: absolute;
-  width: 60%;
-  right: 100px;
-  top: 40%;
   display: inline;
   text-align: center;
 }
@@ -212,11 +228,23 @@ ul.pagination {
   background-color: #25aae1;
   border-color: #25aae1;
   border-radius: 0;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .pagination > li > a, .pagination > li > span {
   color: #25aae1;
   border-radius: 0;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .hotspot-div {
@@ -257,6 +285,7 @@ ul.pagination {
   padding-left: 15px;
   padding-right: 15px;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .donation-items {

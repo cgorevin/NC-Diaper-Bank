@@ -2,11 +2,14 @@ class HotspotsController < ApplicationController
     before_action :authenticate_admin!, :except => [:show, :index]
 
     def index
-
         if params[:user_address]
             user_addr = params[:user_address]
             @current_location = Hotspot.new(street_address: user_addr[:street_address], city: user_addr[:city], zip_code: user_addr[:zip_code])
             @current_location.geocode
+            if @current_location.zip_code == nil
+              flash[:alert] = "Please enter a valid zip code"
+              render 'static_pages/home'
+            end
             @hotspots = Hotspot.address_sort(@current_location)
         else
             @hotspots = Hotspot.order(city: :asc).page(params[:page])

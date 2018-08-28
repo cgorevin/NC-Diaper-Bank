@@ -1,4 +1,3 @@
-
 <h3>Donation Sites</h3>
   <div class="row">
     <div class="col-md-0"></div>
@@ -28,9 +27,9 @@
                   </p>
           <hr></hr>
           <% if admin_signed_in? %>
-                <%= link_to 'Add', "/hotspots/new", class: 'btn btn-primary' %>
+                <%= link_to 'Add', "/hotspots/new", class: 'btn btn-primary buttons' %>
           <% end %>
-          <%= link_to 'New Search',"/static_pages/home", class: 'btn btn-primary' %>
+          <%= link_to 'New Search',"/static_pages/home", class: 'btn btn-primary buttons' %>
         </div>
         <%= paginate @hotspots if @current_location.blank? %>
 

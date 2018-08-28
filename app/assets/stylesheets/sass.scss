@@ -1,0 +1,15 @@
+// sass media query sizes
+$phone-width: 768px;
+
+// sass mixins
+@mixin mobile {
+  @media only screen and (min-width: 1px) and  (max-width: #{$phone-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$phone-width + 1}) {
+    @content;
+  }
+}
