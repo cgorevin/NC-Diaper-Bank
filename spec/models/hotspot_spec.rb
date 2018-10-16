@@ -4,7 +4,7 @@ describe Hotspot do
   it 'geocodes addresses' do
     mock_geocoding!
     hotspot = Hotspot.new
-    
+
     geocoded_hotspot = hotspot.geocode
 
     expect(geocoded_hotspot.latitude).to eq 40.71
@@ -13,7 +13,7 @@ describe Hotspot do
 
   def mock_geocoding!(options = {})
     options.reverse_merge!(
-      address: '2104 Greenwich Place, Durham, 27705',
+      address: '123 Main St, Durham, 27705',
       coordinates: [100.23, 200.68],
       state: 'North Carolina',
       state_code: 'NC',
@@ -28,7 +28,7 @@ describe Hotspot do
       allow(Geocoder).to receive(:search).and_return([result])
     end
   end
-  
+
   class MockResult < ::Geocoder::Result::Base
     def initialize(data = [])
       super(data)
